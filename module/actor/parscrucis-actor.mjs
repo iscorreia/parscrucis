@@ -177,9 +177,7 @@ export class ParsCrucisActor extends Actor {
             : (att.value = att.inputValue);
         } else {
           // Setting pdm attributes.
-          att.inputValue === 0
-            ? (att.value = 0)
-            : (att.value = att.inputValue || null);
+          att.value = att.inputValue ?? att.autoValue ?? 0;
         }
 
         // Verifies attribute values, setting passive values or disabling tests
@@ -197,28 +195,6 @@ export class ParsCrucisActor extends Actor {
             (att.inputValue ? att.inputValue - att.autoValue : 0)
         );
         att.sprint = att.inputSprint || att.autoSprint;
-      }
-
-      if (key === "def") {
-        att.shortLabel = game.i18n.localize(PC.def) ?? key;
-        if (actorType == "persona") {
-          const combatSkillValue = Math.max(...combatSkillsPlusModifiers);
-          const reflex = attributesData.ref;
-          const defBase = RACIALS[race].attributes.def + (att.config || 0);
-          const attCombatDefValue = defBase + combatSkillValue;
-          const attRefDefValue =
-            defBase + reflex.value + reflex.modifiers + (reflex.config || 0);
-          const attBaseValue = Math.max(attCombatDefValue, attRefDefValue);
-          attBaseValue >= 0
-            ? (att.autoValue = attBaseValue)
-            : (att.autoValue = 0);
-          att.value = att.inputValue || att.autoValue;
-        } else {
-          att.inputValue === 0
-            ? (att.value = 0)
-            : (att.value = att.inputValue || null);
-        }
-        this._setAttributes(att);
       }
     }
 
@@ -240,12 +216,29 @@ export class ParsCrucisActor extends Actor {
         minor.value = minor.inputValue || minor.autoValue;
       } else {
         // Setting pdm minor attributes.
-        minor.inputValue === 0
-          ? (minor.value = 0)
-          : (minor.value = minor.inputValue || null);
+        minor.value = minor.inputValue ?? minor.autoValue ?? 0;
       }
       this._setAttributes(minor);
     }
+
+    const defAtt = attributesData.def;
+    defAtt.shortLabel = game.i18n.localize(PC.def) ?? "def";
+    if (actorType == "persona") {
+      const combatSkillValue = Math.max(...combatSkillsPlusModifiers);
+      const defBase = RACIALS[race].attributes.def + (defAtt.config || 0);
+      const attCombatDefValue = defBase + combatSkillValue;
+
+      const ref = minorsData.reflexo;
+      const attRefDefValue = defBase + ref.value + ref.modifiers;
+
+      const attBaseValue = Math.max(attCombatDefValue, attRefDefValue);
+
+      defAtt.autoValue = attBaseValue >= 0 ? attBaseValue : 0;
+      defAtt.value = defAtt.inputValue ?? defAtt.autoValue;
+    } else {
+      defAtt.value = defAtt.inputValue === 0 ? 0 : defAtt.inputValue ?? null;
+    }
+    this._setAttributes(defAtt);
 
     // Handle mitigation.
     for (let [_, armor] of Object.entries(mitData)) {
@@ -262,6 +255,7 @@ export class ParsCrucisActor extends Actor {
         attributesData.ego.value +
         skillsData.resis.value * 2 +
         (resourcesData.pv.config || 0);
+
       resourcesData.pv.max =
         resourcesData.pv.inputValue ||
         resourcesData.pv.autoValue ||

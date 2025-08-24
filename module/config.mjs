@@ -61,7 +61,7 @@ PC.persona = {
 
 PC.attributes = {
   fis: "PC.FIS",
-  ref: "PC.REF",
+  des: "PC.DES",
   ego: "PC.EGO",
   cog: "PC.COG",
   esp: "PC.ESP",
@@ -72,7 +72,7 @@ PC.def = "PC.DEF";
 
 PC.itemAtt = {
   fis: "PC.FIS",
-  ref: "PC.REF",
+  des: "PC.DES",
   ego: "PC.EGO",
   cog: "PC.COG",
   esp: "PC.ESP",
@@ -81,7 +81,7 @@ PC.itemAtt = {
 
 PC.attributeNames = {
   fis: "PC.fisico",
-  ref: "PC.reflexo",
+  des: "PC.destreza",
   ego: "PC.ego",
   cog: "PC.cognicao",
   esp: "PC.espirito",
@@ -89,13 +89,13 @@ PC.attributeNames = {
 
 PC.minors = {
   saude: "PC.Saude",
-  esperteza: "PC.Esperteza",
+  reflexo: "PC.Reflexo",
   vontade: "PC.Vontade",
 };
 
 PC.minorsAbv = {
   saude: "PC.Sau",
-  esperteza: "PC.Esp",
+  reflexo: "PC.Ref",
   vontade: "PC.Von",
 };
 
@@ -104,8 +104,8 @@ PC.saude = {
   ego: "PC.EGO",
 };
 
-PC.esperteza = {
-  ref: "PC.REF",
+PC.reflexo = {
+  des: "PC.DES",
   cog: "PC.COG",
 };
 

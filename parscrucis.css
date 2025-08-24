@@ -1701,15 +1701,11 @@ p {
   border: 1px solid #b5b7b8;
   border: 1px inset #ccc;
   border-radius: 50%;
-  -webkit-appearance: none;
-  -webkit-font-smoothing: antialiased;
-  -webkit-filter: none;
   color: #06003b;
   box-shadow: 0px 1px 3px #741515e7 !important;
 }
 .parscrucis-item-sheet .alternative-damage[type="checkbox"]::before {
   font-family: "Font Awesome 5 Free";
-  content: "\f71c";
   font-weight: bold;
 }
 .parscrucis-item-sheet .alternative-damage[type="checkbox"]:checked {
@@ -1720,7 +1716,6 @@ p {
 }
 .parscrucis-item-sheet .alternative-damage[type="checkbox"]:checked::before {
   font-family: "Font Awesome 5 Free";
-  content: "\f71d";
   font-weight: bold;
 }
 .parscrucis-item-sheet .action-delete {

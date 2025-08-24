@@ -64,7 +64,7 @@
   "PC.Challenge": "Desafio!",
 
   "PC.FIS": "FIS",
-  "PC.REF": "REF",
+  "PC.DES": "DES",
   "PC.EGO": "EGO",
   "PC.COG": "COG",
   "PC.ESP": "ESP",
@@ -74,18 +74,18 @@
   "PV.Movement": "Movimentação",
 
   "PC.fisico": "Físico",
-  "PC.reflexo": "Reflexo",
+  "PC.destreza": "Destreza",
   "PC.ego": "Ego",
   "PC.cognicao": "Cognição",
   "PC.espirito": "Espírito",
 
   "PC.Sorte": "Sorte",
   "PC.Saude": "Saúde",
-  "PC.Esperteza": "Esperteza",
+  "PC.Reflexo": "Reflexo",
   "PC.Vontade": "Vontade",
 
   "PC.Sau": "Sau",
-  "PC.Esp": "Esp",
+  "PC.Ref": "Ref",
   "PC.Von": "Von",
 
   "PC.PV": "PV",

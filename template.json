@@ -8,7 +8,7 @@
             "value": null,
             "modifiers": 0
           },
-          "ref": {
+          "des": {
             "value": null,
             "modifiers": 0
           },
@@ -50,8 +50,8 @@
             "value": null,
             "modifiers": 0
           },
-          "esperteza": {
-            "attributes": ["ref", "cog"],
+          "reflexo": {
+            "attributes": ["des", "cog"],
             "value": null,
             "modifiers": 0
           },
@@ -124,7 +124,7 @@
             "modifiers": 0
           },
           "briga": {
-            "attribute": "ref",
+            "attribute": "des",
             "group": "physical",
             "growth": 1,
             "aprendizado": "",
@@ -132,7 +132,7 @@
             "modifiers": 0
           },
           "esgri": {
-            "attribute": "ref",
+            "attribute": "des",
             "group": "physical",
             "growth": 1,
             "aprendizado": "",
@@ -140,7 +140,7 @@
             "modifiers": 0
           },
           "hasta": {
-            "attribute": "ref",
+            "attribute": "des",
             "group": "physical",
             "growth": 1,
             "aprendizado": "",
@@ -165,7 +165,7 @@
           },
 
           "agili": {
-            "attribute": "ref",
+            "attribute": "des",
             "group": "subterfuge",
             "growth": 1,
             "aprendizado": "",
@@ -173,7 +173,7 @@
             "modifiers": 0
           },
           "arque": {
-            "attribute": "ref",
+            "attribute": "des",
             "group": "subterfuge",
             "growth": 2,
             "aprendizado": "",
@@ -181,7 +181,7 @@
             "modifiers": 0
           },
           "balis": {
-            "attribute": "ref",
+            "attribute": "des",
             "group": "subterfuge",
             "growth": 2,
             "aprendizado": "",
@@ -189,7 +189,7 @@
             "modifiers": 0
           },
           "furti": {
-            "attribute": "ref",
+            "attribute": "des",
             "group": "subterfuge",
             "growth": 1,
             "aprendizado": "",
@@ -197,7 +197,7 @@
             "modifiers": 0
           },
           "ladin": {
-            "attribute": "ref",
+            "attribute": "des",
             "group": "subterfuge",
             "growth": 1,
             "aprendizado": "",
@@ -205,7 +205,7 @@
             "modifiers": 0
           },
           "perce": {
-            "attribute": "ref",
+            "attribute": "des",
             "group": "subterfuge",
             "growth": 1,
             "aprendizado": "",

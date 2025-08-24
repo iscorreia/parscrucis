@@ -54,7 +54,7 @@ Hooks.once("init", function () {
    * @type {String}
    */
   CONFIG.Combat.initiative = {
-    formula: "1d10 + @minors.esperteza.value + @minors.esperteza.modifiers", // + (@attributes.ref.value + @attributes.ref.modifiers) / 100",
+    formula: "1d10 + @minors.reflexo.value + @minors.reflexo.modifiers",
     decimals: 2,
   };
 
