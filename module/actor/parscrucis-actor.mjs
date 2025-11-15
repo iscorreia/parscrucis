@@ -177,7 +177,9 @@ export class ParsCrucisActor extends Actor {
             : (att.value = att.inputValue);
         } else {
           // Setting pdm attributes.
-          att.value = att.inputValue ?? att.autoValue ?? 0;
+          att.inputValue === 0
+            ? (att.value = 0)
+            : (att.value = att.inputValue || null);
         }
 
         // Verifies attribute values, setting passive values or disabling tests
@@ -216,7 +218,9 @@ export class ParsCrucisActor extends Actor {
         minor.value = minor.inputValue || minor.autoValue;
       } else {
         // Setting pdm minor attributes.
-        minor.value = minor.inputValue ?? minor.autoValue ?? 0;
+        minor.inputValue === 0
+          ? (minor.value = 0)
+          : (minor.value = minor.inputValue || null);
       }
       this._setAttributes(minor);
     }
